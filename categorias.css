@@ -1,0 +1,32 @@
+.grade-produtos {
+  width: 80%;
+}
+
+aside {
+  width: 20%;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .row {
+    width: 100% !important;
+    flex-direction: column; /* empilha filtros e produtos */
+    align-items: center; /* centraliza os itens */
+  }
+
+  aside {
+    width: 100%;   /* ocupa a tela inteira */
+    margin-bottom: 20px; /* dá espaço abaixo */
+  }
+
+  .grade-produtos {
+    width: 90%;    /* mais estreito e centralizado */
+    margin: 0 auto;
+  }
+}
