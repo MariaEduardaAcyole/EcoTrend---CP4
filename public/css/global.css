@@ -1,4 +1,4 @@
-/* Fonte global */
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f9f9f9;
@@ -6,7 +6,7 @@ body {
     line-height: 1.6;
 }
 
-/* Navbar */
+
 .navbar {
     padding: 1rem;
 }
@@ -37,7 +37,7 @@ body {
     background-color: #256628;
 }
 
-/* Banner */
+
 .banner img {
     object-fit: cover;
     height: 400px;
@@ -48,7 +48,7 @@ h2 {
     color: #2e7d32;
 }
 
-/* Cards de Produtos */
+
 .card {
   border: none;
   border-radius: 12px;
@@ -61,8 +61,8 @@ h2 {
 }
 
 .card img {
-  height: 160px; /* reduz altura da imagem */
-  object-fit: contain; /* mantém proporção da imagem */
+  height: 160px; 
+  object-fit: contain; 
   padding: 10px;
 }
 
@@ -98,7 +98,7 @@ h2 {
 }
 
 
-/* Seção Sobre Nós */
+
 .sobre-nos {
     background-color: #e8f5e9;
     padding: 50px 20px;
@@ -107,7 +107,7 @@ h2 {
     margin: 40px auto;
 }
 
-/* Footer */
+
 footer {
     background: #1b1b1b;
     color: #f1f1f1;
@@ -155,7 +155,7 @@ text-align: center;
 
 }
 
-/* Folhas */
+
 .leaf {
   position: absolute;
   width: 20px;
@@ -182,4 +182,10 @@ text-align: center;
     -ms-transform: translateY(-50px) scale(0.6) rotate(45deg);
     -o-transform: translateY(-50px) scale(0.6) rotate(45deg);
 }
+}
+@media (max-width: 576px) {
+  
+  .banner img {
+    height: 200px;
+  }
 }

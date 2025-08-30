@@ -1,32 +1,22 @@
-.grade-produtos {
-  width: 80%;
+
+.grade-produtos, aside {
+  width: auto;
 }
 
-aside {
-  width: 20%;
-}
 
 .row {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
+ 
 
-/* Responsividade */
 @media (max-width: 768px) {
   .row {
-    width: 100% !important;
     flex-direction: column; 
     align-items: center;
   }
-
   aside {
     width: 100%;   
     margin-bottom: 20px; 
-  }
-
-  .grade-produtos {
-    width: 90%;    /* mais estreito*/
-    margin: 0 auto;
   }
 }
