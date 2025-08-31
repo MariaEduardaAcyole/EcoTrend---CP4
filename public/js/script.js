@@ -182,7 +182,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 mostrar = false;
             }
 
-            // Aplica no DOM
             produto.style.display = mostrar ? "block" : "none";
         });
     });
