@@ -148,3 +148,42 @@ function finalizarCompra() {
     // Atualizar o contador no cabeçalho
     atualizarContadorCarrinho([]);
 }
+
+// PARTE DO FILTRO
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btnFiltro = document.querySelector(".btn-aplicar-filtros");
+    const produtos = document.querySelectorAll(".produto");
+
+    btnFiltro.addEventListener("click", () => {
+        // Pega valores dos filtros
+        const precoMax = document.querySelector("input[type='range']").value;
+        const categoria = document.querySelector("select").value;
+        
+        const marcasSelecionadas = [...document.querySelectorAll("input[type='checkbox']:checked")]
+            .map(cb => cb.nextElementSibling.textContent.trim());
+
+        // Filtra os produtos
+        produtos.forEach(produto => {
+            const preco = parseFloat(produto.dataset.preco);
+            const cat = produto.dataset.categoria;
+            const marca = produto.dataset.marca;
+
+            let mostrar = true;
+
+            // Filtro por preço
+            if (preco > precoMax) mostrar = false;
+
+            // Filtro por categoria
+            if (categoria && cat !== categoria) mostrar = false;
+
+            // Filtro por marca
+            if (marcasSelecionadas.length > 0 && !marcasSelecionadas.includes(marca)) {
+                mostrar = false;
+            }
+
+            // Aplica no DOM
+            produto.style.display = mostrar ? "block" : "none";
+        });
+    });
+});
